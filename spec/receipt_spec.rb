@@ -21,7 +21,7 @@ RSpec.describe Receipt do
     new_receipt.add_order(vegan_biryani, 1)
     expect(new_receipt.receipt(10)).to eq "You have ordered: x1 'Vegan biryani' at (in £) 10.99 each, Total cost (in £) incl. tip of 10%: 12.09"
   end
-
+  
   it "can generate a receipt, when multiple dishes are ordered" do
     vegan_biryani = double :dish, name: "Vegan biryani", price: 10.99
     veggie_biryani = double :dish, name: "Veggie biryani", price: 11.99

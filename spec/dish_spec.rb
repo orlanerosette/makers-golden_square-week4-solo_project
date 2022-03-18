@@ -6,5 +6,4 @@ RSpec.describe Dish do
     expect(veggie_taco.name).to eq "Veggie taco"
     expect(veggie_taco.price).to eq 8.99
   end
-
 end

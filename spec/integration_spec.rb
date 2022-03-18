@@ -38,7 +38,7 @@ RSpec.describe "integration" do
     new_receipt.add_order(vegan_biryani, 1)
     expect {new_receipt.receipt(-10)}.to raise_error "Error: Tip has to 0% or greater"
   end
-
+  
   it "generates an empty receipt message when no order is made" do
     vegan_biryani = Dish.new("Vegan biryani", 10.99)
     new_receipt = Receipt.new

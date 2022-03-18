@@ -5,7 +5,7 @@ RSpec.describe Dishes do
     available_dishes = Dishes.new
     expect(available_dishes.all).to eq []
   end
-
+  
   it "can add dishes" do
     new_order = Dishes.new
     vegan_pizza = double :dish, name: "Vegan Pizza", price: 9.99
@@ -16,6 +16,4 @@ RSpec.describe Dishes do
     new_order.add(meat_pizza)
     expect(new_order.all).to eq [vegan_pizza, veggie_pizza, meat_pizza]
   end
-
-
 end
